@@ -1,0 +1,9 @@
+.idea/
+.idea/*.*
+.idae/**/*.*
+node_modules/
+build/
+template/
+.grunt-tasks/
+.Gruntfile.js
+package.json
