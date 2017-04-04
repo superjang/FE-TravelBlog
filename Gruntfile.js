@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    var spriteHelper = require('./.grunt-tasks/sprite-helper.js');
 
     // Project configuration.
     grunt.initConfig({
@@ -14,7 +15,8 @@ module.exports = function(grunt) {
                 html : 'origin/html/',
                 scss : 'origin/scss/',
                 js : 'origin/js/',
-                image : 'origin/image/'
+                aImage : 'origin/images/image/',
+                spriteImage : 'origin/images/sprite/'
             }
         },
         clean: {
@@ -26,6 +28,7 @@ module.exports = function(grunt) {
                 '<%=path.build.image %>'
             ]
         },
+        sprite: spriteHelper('origin/images/sprite/'),
         sass: {
             build: {
                 options: {
@@ -56,15 +59,27 @@ module.exports = function(grunt) {
                     }
                 ]
             }
+        },
+        watch: {
+            includes: {
+                files: ['<%= path.origin.html %>**/*.html'],
+                tasks: ['includereplace:dist']
+            },
+            scss: {
+                files: ['<%= path.origin.scss %>*.scss', '<%= path.origin.scss %>**/*.scss'],
+                tasks: ['sass:build']
+            }
         }
     });
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-include-replace');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'sass', 'includereplace']);
+    grunt.registerTask('default', ['clean', 'sass', 'includereplace', 'watch']);
 
 };

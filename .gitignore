@@ -6,5 +6,4 @@ build/
 template/
 .grunt-tasks/
 .sass-cache/
-.Gruntfile.js
 package.json

@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 @import './common/reset';
+//@import './sprite/mixins';
+//@import './sprite/app';
 @import './common/global_navigation';
 @import './mixin/mixin';
-@import './layout/layout';
+@import './common/layout';
 

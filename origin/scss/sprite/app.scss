@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+%sp-app {
+    background: url('build/images/sprite/sp-app.png?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:(1746px/2) (1526px/2);
+    -webkit-background-size:(1746px/2) (1526px/2);
+}
+
+@mixin sp-app($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get($sp-app, $filename);
+    @extend %sp-app;
+	@include sp-mosaic-base($sp-app, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+$sp-app: (
+    spritesheet_name: sp-app,
+    dummy: (offset_x: 0, offset_y: 0, width: 1196px, height: 1526px),
+    dummy1: (offset_x: -1200px, offset_y: 0, width: 546px, height: 508px),
+);
