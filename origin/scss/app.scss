@@ -4,8 +4,8 @@
 @import './common/reset';
 @import './common/util';
 @import './common/layout';
-//@import './sprite/mixins';
-//@import './sprite/app';
+@import './sprite/mixins';
+@import './sprite/app';
 
 @import './components/common/header'; // UI 헤더
 @import './components/common/footer'; // UI 푸터
