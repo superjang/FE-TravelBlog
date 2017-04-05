@@ -3,7 +3,4 @@
 .idae/**/*.*
 node_modules/
 build/
-template/
-.grunt-tasks/
 .sass-cache/
-package.json

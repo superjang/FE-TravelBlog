@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+%{{spritesheet_name}} {
+    background: url('{{{spritesheet.escaped_image}}}?v=#{timestamp()}') no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    background-size:({{spritesheet.width}}px/2) ({{spritesheet.height}}px/2);
+    -webkit-background-size:({{spritesheet.width}}px/2) ({{spritesheet.height}}px/2);
+}
+
+@mixin {{spritesheet_name}}($filename, $padding-top:0, $padding-right:0, $padding-bottom:0, $padding-left:0){
+	$dimension-map: map-get(${{spritesheet_name}}, $filename);
+    @extend %{{spritesheet_name}};
+	@include sp-mosaic-base(${{spritesheet_name}}, $dimension-map, $filename, $padding-top, $padding-right, $padding-bottom, $padding-left);
+}
+
+${{spritesheet_name}}: (
+    spritesheet_name: {{spritesheet_name}},
+    {{#items}}
+    {{name}}: (offset_x: {{#options.zerounit}}{{px.offset_x}}{{/options.zerounit}}, offset_y: {{#options.zerounit}}{{px.offset_y}}{{/options.zerounit}}, width: {{px.width}}, height: {{px.height}}),
+    {{/items}}
+);
