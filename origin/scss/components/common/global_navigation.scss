@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+#header{
+  @include clear;
+
+  .nav__global{
+    float:right;
+
+    ul{
+      @include clear;
+
+      .nav__link{
+        float:left;
+
+        .nav__link_text{
+          display:block;
+          letter-spacing:1.5px;
+          text-transform: uppercase;
+          padding:30px 15px;
+          color:#fff;
+          box-sizing:border-box;
+          font:{
+            size:18px;
+            weight:bold;
+            family:$font-en__travel_main;
+          }
+          &:hover{
+            color:#78ff16;
+          }
+        }
+
+        .button__login_text{
+          padding:{
+            top:0;
+            bottom:0;
+          }
+          height:78px;
+          cursor:pointer;
+        }
+
+        #form__login{
+          position:absolute;
+          padding:15px;
+          width:240px;
+          right:0;
+          background-color:rgba(0, 0, 0, 0.2);
+          border-radius:3px;
+          transition:all 1s ease;
+          label{
+            @include hidden();
+          }
+          .field{
+            width:100%;
+            border:none;
+            box-sizing:border-box;
+            padding:10px;
+            height:45px;
+            font-size:14px;
+            &.field__id{
+              border-radius:3px 3px 0 0;
+              border-bottom:1px solid #ddd;
+            }
+            &.field__password{
+              border-radius:0 0 3px 3px;
+            }
+          }
+          .button__login{
+            width:100%;
+            margin-top:15px;
+            text-align:center;
+            border-radius:3px;
+            height:45px;
+            cursor:pointer;
+            text-transform: uppercase;
+            background-color:#fff;
+            color:#00cc99;
+            font:{
+              size:14px;
+              weight:bold;
+            }
+            transition:all .2s ease;
+            &:hover{
+              background-color:#00cc99;
+              color:#fff;
+            }
+          }
+        }
+
+        &.nav__login_item--on{
+          position:relative;
+          #form__login{
+            top:85px;
+            display:block;
+          }
+        }
+
+        &.nav__login_item--off{
+          #form__login{
+            top:78px;
+            display:none;
+          }
+        }
+      }
+    }
+  }
+
+}

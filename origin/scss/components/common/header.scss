@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+#header{
+  position:fixed;
+  z-index: 9999;
+  width:100%;
+  box-sizing:border-box;
+  background-color:rgba(0,0,0,0.2);
+
+  #header--inner{
+    min-width:720px;
+    max-width:1280px;
+    margin:0 auto;
+
+    // 헤더UI 로고
+    #logo__title{
+      display:inline-block;
+      box-sizing:border-box;
+      color:#fff;
+      line-height:78px;
+      padding:0 30px;
+      margin-left:-30px;
+      letter-spacing:1.5px;
+      text-transform: uppercase;
+      font:{
+        size:20px;
+        weight:bold;
+        family:$font-en__travel_main;
+      }
+    }
+  }
+}
+
+// 글로벌 내비게이션
+@import './global_navigation';

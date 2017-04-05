@@ -1,9 +1,15 @@
 @charset "utf-8";
 
+@import './common/mixin';
 @import './common/reset';
+@import './common/util';
+@import './common/layout';
 //@import './sprite/mixins';
 //@import './sprite/app';
-@import './common/global_navigation';
-@import './mixin/mixin';
-@import './common/layout';
+
+@import './components/common/header'; // UI 헤더
+@import './components/common/footer'; // UI 푸터
+@import './view/main'; // UI 메인 컨텐츠 영역
+
+
 

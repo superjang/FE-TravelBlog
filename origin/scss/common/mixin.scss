@@ -63,3 +63,9 @@
   font-size: 0;
   vertical-align: top;
 }
+
+@mixin hidden{
+  position:fixed;
+  left:-9999px;
+  top:-9999px;
+}
