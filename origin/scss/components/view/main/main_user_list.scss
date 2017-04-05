@@ -1,1 +1,36 @@
 @charset "utf-8";
+
+.section--list_wrap{
+
+  .section--user_list{
+    @include clear;
+    .list--user{
+      float:left;
+      box-sizing:border-box;
+      width:100px;
+      margin-right:30px;
+      &:last-child{
+        margin-right:0;
+      }
+      img{
+        width:100%;
+        border-radius:10px 10px 0 10px;
+        overflow:hidden;
+      }
+      .name{
+        margin-top:10px;
+        display:block;
+        color:#666;
+        text-align:center;
+      }
+      .text--traveling_country{
+        margin-top:5px;
+        display:block;
+        color:#666;
+        text-align:center;
+        border-top: 1px solid #666;
+        padding-top: 10px;
+      }
+    }
+  }
+}
