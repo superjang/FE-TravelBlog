@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 html : 'build/html/',
                 css : 'build/css/',
                 js : 'build/js/',
-                image : 'build/image/'
+                image : 'build/images/'
             },
             origin : {
                 html : 'origin/html/',
@@ -60,6 +60,15 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        copy: {
+            main: {
+                expand: true,
+                cwd: '<%= path.origin.aImage %>',
+                src: '**/*',
+                flatten: false,
+                dest: '<%= path.build.image %>image/'
+            }
+        },
         watch: {
             includes: {
                 files: ['<%= path.origin.html %>**/*.html'],
@@ -76,10 +85,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-include-replace');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'sass', 'includereplace', 'watch']);
+    grunt.registerTask('default', ['clean', 'copy', 'sass', 'includereplace', 'watch']);
 
 };
