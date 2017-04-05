@@ -1,24 +1,26 @@
 @@include('common/head.html')
+    <div id="app" class="view--main">
+        @@include('common/ui_header.html')
 
-    @@include('common/ui_header.html')
-    <div id="app" class="nm-view">
         @@include('view/main/main_visual.html')
 
-        @@include('view/main/main_item_list.html', {
-            "title" : "LATEST BLOG POST",
-            "class_arrange_type" : "column3"
-        })
+        <div class="content--main">
+            @@include('view/main/main_item_list.html', {
+                "title" : "LATEST BLOG POST",
+                "class_arrange_type" : "column3"
+            })
 
-        @@include('view/main/main_item_list.html', {
-            "title" : "LATEST VISITED COUNTRY",
-            "class_arrange_type" : "column3"
-        })
+            @@include('view/main/main_item_list.html', {
+                "title" : "LATEST VISITED COUNTRY",
+                "class_arrange_type" : "column4"
+            })
 
-        @@include('view/main/main_user_list.html', {
-            "title" : "PEOPLE TRAVELING",
-            "class_arrange_type" : "column8"
-        })
+            @@include('view/main/main_user_list.html', {
+                "title" : "PEOPLE TRAVELING",
+                "class_arrange_type" : "column8"
+            })
+        </div>
+
+        @@include('common/ui_footer.html')
     </div>
-    @@include('common/ui_footer.html')
-
 @@include('common/tail.html')

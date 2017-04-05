@@ -3,11 +3,13 @@
 #footer{
   width:100%;
   box-sizing:border-box;
-  background-color:rgba(0,0,0,0.2);
+  background:url('../images/image/common/bg_travel_illustrate.jpg') no-repeat 50% 50%;
 
   #footer--inner{
     min-width:720px;
     max-width:1280px;
     margin:0 auto;
+    padding:20px;
+    color:#fff;
   }
 }
