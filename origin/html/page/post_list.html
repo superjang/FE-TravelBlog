@@ -1,19 +1,26 @@
 @@include('common/head.html')
 <div id="app" class="page_post">
     @@include('common/ui_header.html')
-    @@include('common/top_visual.html')
+    @@include('common/top_visual.html',{
+        "text_main" : "메인 타이틀을 여기다가 똮!!",
+        "text_sub" : "그럼 서브 타이틀은 여기에 똮~~ 기가 막히네!! ㅋㅋ"
+    })
     <div class="contents">
-        <div class="section wrap_post_list">
-            <div class="section_inner">
+        <div class="contents_inner">
+            <div class="page_info">
+                <h1 class="title">POST LIST</h1>
+                <select name="" id="">
+                    <option value="as">정렬</option>
+                </select>
+            </div>
+
+            <div class="wrap_post_list">
                 <ul class="post_list">
                     <li class="post_item">
                         <a href="" class="post_link">
                             <span class="item_photo" style="background:url('../../images/image/page/main/main_visual/item_1.jpg') no-repeat 50% 50%; background-size:cover;">
                                 <span class="item_title">포스트 타이틀</span>
                             </span>
-                            <div class="item_info">
-                                <span class="item_writer">작성자 : 장재원</span>
-                            </div>
                             <p class="item_description">
                                 뉴욕하면 단연 센트럴 파크를 떠올리지만 센트럴 파크에서 조금만 가면 작고 아담한 브라이언트 파크가 있다.
                                 뉴욕하면 단연 센트럴 파크를 떠올리지만 센트럴 파크에서 조금만 가면 작고 아담한 브라이언트 파크가 있다.
@@ -48,10 +55,6 @@
                             <span class="item_photo" style="background:url('../../images/image/page/main/main_visual/item_1.jpg') no-repeat 50% 50%; background-size:cover;">
                                 <span class="item_title">포스트 타이틀</span>
                             </span>
-                            <div class="item_info">
-                                <span class="item_writer">작성자 : 장재원</span>
-                                <span class="item_date">2017년 5월 19일</span>
-                            </div>
                             <p class="item_description">
                                 뉴욕하면 단연 센트럴 파크를 떠올리지만 센트럴 파크에서 조금만 가면 작고 아담한 브라이언트 파크가 있다.
                                 뉴욕하면 단연 센트럴 파크를 떠올리지만 센트럴 파크에서 조금만 가면 작고 아담한 브라이언트 파크가 있다.
@@ -73,10 +76,14 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <div class="pagination">
-            123
+
+            <div class="pagination">
+                <a href="" class="btn_prev_page">이전</a>
+                <a href="" class="btn_page_item on">1</a>
+                <a href="" class="btn_page_item">2</a>
+                <a href="" class="btn_next_page">다음</a>
+            </div>
         </div>
     </div>
     @@include('common/ui_footer.html')

@@ -5,7 +5,7 @@
   background-color:#fff;
 
   .contents{
-
+    padding-bottom:80px;
   }
   // 메인페이지
   &.page_main{
@@ -18,7 +18,11 @@
   &.page_about{}
   &.page_post{
     .contents{
-      padding-top:50px;
+      padding-top:150px;
+
+      .wrap_comments{
+        margin-top:40px;
+      }
     }
   }
   &.page_photo{}
@@ -26,8 +30,10 @@
   &.page_register{}
 }
 
+.contents,
 .section{
   width:100%;
+  .contents_inner,
   .section_inner{
       position:relative;
       box-sizing: border-box;

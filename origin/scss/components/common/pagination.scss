@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.pagination{
+  display:table;
+  margin:0 auto;
+  .btn_prev_page,
+  .btn_next_page,
+  .btn_page_item{
+    text-align:center;
+    display:table-cell;
+    vertical-align:middle;
+    width:45px;
+    height:45px;
+    margin-right:-4px;
+    transition:all .5s ease;
+    &:hover{
+      color:#fff;
+      background-color:$main-color;
+    }
+  }
+  .btn_prev_page{
+    border:{
+      top:1px solid #ddd;
+      right:1px solid #ddd;
+      left:1px solid #ddd;
+      bottom:1px solid #ddd;
+    }
+    border-radius:3px 0 0 3px;
+  }
+  .btn_next_page{
+    border:{
+      top:1px solid #ddd;
+      right:1px solid #ddd;
+      bottom:1px solid #ddd;
+    }
+    border-radius:0 3px 3px 0;
+  }
+  .btn_page_item{
+    border:{
+      top:1px solid #ddd;
+      right:1px solid #ddd;
+      bottom:1px solid #ddd;
+    }
+    color:#666;
+    font:{
+      size:18px;
+      weight:bold;
+    }
+    &.on{
+      color:#fff;
+      background-color:$main-color;
+    }
+  }
+}
