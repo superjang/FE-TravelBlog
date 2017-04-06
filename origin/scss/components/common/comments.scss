@@ -41,6 +41,7 @@
   .comments_list{
     margin-top:25px;
     .comments_item{
+      position:relative;
       margin-bottom:15px;
       &:last-child{
         margin-bottom:0;
