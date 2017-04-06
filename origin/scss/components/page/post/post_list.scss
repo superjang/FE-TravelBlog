@@ -1,45 +1,4 @@
 @charset "utf-8";
-#post_detail{
-  .post_header{
-    max-width:1024px;
-    margin:0 auto 10px;
-    padding:0 0 10px;
-    border-bottom:1px solid #a1a1a1;
-    .post_title{
-      font-size:30px;
-      margin-bottom:10px;
-      color:#6b6b6b;
-    }
-    .post_info{
-      color:#6b6b6b;
-      font-size:14px;
-      font-weight:bold;
-      .date,
-      .writer{font-weight:normal;}
-    }
-  }
-
-
-  .post_content *{
-    max-width:1024px;
-    margin:0 auto;
-    padding:0 20px;
-  }
-  .post_content{
-    width:100%;
-    padding-top:10px;
-    img{
-      padding:0;
-      width: 100%;
-      max-width:100%;
-      margin: 15px 0;
-    }
-    p{
-      line-height:1.4em;
-    }
-  }
-}
-
 
 .page_info{
   .page_info_title{
