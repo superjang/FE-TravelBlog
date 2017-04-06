@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+// 레이아웃 공통 스타일
+#app {
+  width: 100%;
+  background-color: #fff;
+
+  .section {
+    width: 100%;
+    .section_inner {
+      position: relative;
+      box-sizing: border-box;
+      max-width: $wide-layout;
+      margin: 0 auto;
+    }
+  }
+
+  .wrap_comments{
+    max-width:1024px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+}
+
+// 페이지별 레이아웃 분기처리
+#app {
+  // 메인 페이지
+  &.page_main{
+    height:100%;
+  }
+
+  // 포스트 리스트 페이지
+  &.page_post_list{
+    .page_info{
+      margin-top:50px;
+    }
+    .wrap_post_list{
+      margin-top:50px;
+    }
+    .pagination{
+      margin:80px auto;
+    }
+  }
+
+  // 포스트 상세 페이지
+  &.page_post_detail{
+    .section{
+      margin-top:80px;
+      .section_inner{
+        max-width:100%;
+        padding:0;
+      }
+      #wrap_post_detail{
+        padding-top:50px;
+      }
+      .wrap_comments{
+        margin:50px auto;
+      }
+    }
+  }
+
+  // 블로그 안내 페이지
+  &.page_about{}
+
+  // 포토 리스트 페이지
+  &.page_photo{}
+
+  // 회원가입 페이지
+  &.page_register{}
+}

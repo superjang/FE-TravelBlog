@@ -1,12 +1,13 @@
 @@include('common/head.html')
-<div id="app" class="page_post">
+<div id="app" class="page_post_list">
     @@include('common/ui_header.html')
     @@include('common/top_visual.html',{
         "text_main" : "메인 타이틀을 여기다가 똮!!",
         "text_sub" : "그럼 서브 타이틀은 여기에 똮~~ 기가 막히네!! ㅋㅋ"
     })
-    <div class="contents">
-        <div class="contents_inner">
+
+    <div class="section">
+        <div class="section_inner">
             <div class="page_info">
                 <h1 class="page_info_title">POST LIST</h1>
                 <select name="" id="" class="list_sort">
@@ -18,7 +19,11 @@
                     <option value="as">미국</option>
                 </select>
             </div>
+        </div>
+    </div>
 
+    <div class="section">
+        <div class="section_inner">
             <div class="wrap_post_list">
                 <ul class="post_list">
                     <li class="post_item">
@@ -81,8 +86,11 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </div>
 
-
+    <div class="section">
+        <div class="section_inner">
             <div class="pagination">
                 <a href="" class="btn_prev_page">이전</a>
                 <a href="" class="btn_page_item on">1</a>
@@ -91,6 +99,7 @@
             </div>
         </div>
     </div>
+
     @@include('common/ui_footer.html')
     @@include('common/ui_go_page_top.html')
 </div>
