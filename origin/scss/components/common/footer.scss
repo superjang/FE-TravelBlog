@@ -2,9 +2,8 @@
 
 #footer{
   width:100%;
-  min-height:200px;
   box-sizing:border-box;
-  background:url('../images/image/common/bg_travel_illustrate.jpg') no-repeat 50% 50%;
+  background: #586277; //url('../images/image/common/bg_travel_illustrate.jpg') no-repeat 50% 50%;
 
   #footer--inner{
     min-width:720px;
@@ -12,5 +11,9 @@
     margin:0 auto;
     padding:20px;
     color:#fff;
+    .text{
+      text-align:center;
+      color:#b0b0b0;
+    }
   }
 }
