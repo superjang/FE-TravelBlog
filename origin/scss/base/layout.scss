@@ -46,10 +46,17 @@
     }
   }
 
+  &.page_post_write{
+    margin-top:80px;
+    #wrap_post_write{
+      padding:50px 0;
+    }
+  }
+
   // 포스트 상세 페이지
   &.page_post_detail{
+    margin-top:80px;
     .section{
-      margin-top:80px;
       .section_inner{
         max-width:100%;
         padding:0;
