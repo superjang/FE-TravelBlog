@@ -30,6 +30,8 @@
         float:left;
         box-sizing: border-box;
         padding:0 10px;
+        min-height:380px;
+        margin-bottom:30px;
         .item_link{
           width:100%;
           display: block;
@@ -59,16 +61,25 @@
       &.column2{
         .item {
           width: 50%;
+          .item_photo {
+            height: 300px;
+          }
         }
       }
       &.column3{
         .item {
           width: 33.33%;
+          .item_photo {
+            height: 220px;
+          }
         }
       }
       &.column4{
         .item {
           width: 25%;
+          .item_photo {
+            height: 200px;
+          }
         }
       }
       &.column5{

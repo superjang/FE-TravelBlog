@@ -1,28 +1,33 @@
 @charset "utf-8";
 
+body{
+  background-color: #586277;
+}
 // 레이아웃 공통 스타일
 #app {
   width: 100%;
-  background-color: #fff;
+  background-color:#fff;
 
-  .section {
-    width: 100%;
-    .section_inner {
-      position: relative;
-      box-sizing: border-box;
-      max-width: $wide-layout;
-      margin: 0 auto;
+  .container{
+    min-height: 700px;
+    padding-bottom: 100px;
+    background-color:#fff;
+
+    .section {
+      width: 100%;
+      .section_inner {
+        position: relative;
+        box-sizing: border-box;
+        max-width: $wide-layout;
+        margin: 0 auto;
+      }
     }
-  }
 
-  .wrap_comments{
-    max-width:1024px;
-    margin:0 auto;
-    padding:0 20px;
-  }
-
-  #footer{
-    margin-top:100px;
+    .wrap_comments{
+      max-width:1024px;
+      margin:0 auto;
+      padding:0 20px;
+    }
   }
 }
 
@@ -46,28 +51,45 @@
     }
   }
 
+  // 포스트 작성 페이지
   &.page_post_write{
-    margin-top:80px;
-    #wrap_post_write{
-      padding:50px 0;
+    padding-top:$header-height;
+    .container {
+      #wrap_post_write {
+        padding: 50px 0;
+      }
     }
   }
 
   // 포스트 상세 페이지
   &.page_post_detail{
-    margin-top:80px;
-    .section{
-      .section_inner{
-        max-width:100%;
-        padding:0;
-      }
-      #wrap_post_detail{
-        padding-top:50px;
-      }
-      .wrap_comments{
-        margin:50px auto;
+    padding-top:$header-height;
+    .container{
+      .section{
+        .section_inner{
+          max-width:100%;
+          padding:0;
+        }
+        #wrap_post_detail{
+          padding-top:50px;
+        }
+        .wrap_comments{
+          margin:50px auto;
+        }
       }
     }
+  }
+
+  &.page_photo_list{
+    .container{
+      padding-top:$header-height;
+    }
+  }
+
+  // 사용자목록
+  &.page_user_list{
+    padding-top:$header-height;
+
   }
 
   // 블로그 안내 페이지

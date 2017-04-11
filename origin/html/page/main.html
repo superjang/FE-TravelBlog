@@ -3,22 +3,17 @@
     @@include('common/ui_header.html')
     @@include('page/main/visual.html')
 
-    <div class="section">
-        <div class="section_inner">
-            @@include('page/main/main_item_list.html', {
+    <div class="container">
+        <div class="section">
+            <div class="section_inner">
+                @@include('page/main/main_item_list.html', {
                 "title" : "LATEST BLOG POST",
                 "class_arrange_type" : "column4"
-            })
+                })
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section_inner">
-            @@include('page/main/main_user_list.html', {
-                "title" : "PEOPLE TRAVELING",
-                "class_arrange_type" : "column8"
-            })
-        </div>
+
     </div>
 
     @@include('common/ui_footer.html')
