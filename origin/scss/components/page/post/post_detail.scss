@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 #wrap_post_detail{
-  padding:40px 20px 0;
   .post_header{
     max-width:1024px;
     margin: 0 auto 10px;
@@ -40,9 +39,10 @@
     }
     img{
       padding:0;
-      width: 100%;
-      max-width:100%;
-      margin:0;
+      width: 110%;
+      max-width:110%;
+      margin:0 0 0 -5%;
+      display:block;
     }
   }
 }
