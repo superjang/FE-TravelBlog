@@ -107,10 +107,16 @@
           }
         }
 
-        &.nav__login_item--off{
-          #form__login{
-            top:78px;
-            display:none;
+        &.link__user{
+          //#form__login{
+          //  top:78px;
+          //  display:none;
+          //}
+          &:hover{
+            .nav__link_user{
+              border: 1px solid #26ff8c;
+              box-sizing: border-box;
+            }
           }
         }
       }

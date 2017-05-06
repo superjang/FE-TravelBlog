@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+// 포스트 리스트 헤더(정렬, 타이틀)
+.list_header{
+  .list_header_title{
+    font-size: 30px;
+    font-family:$font-en__travel_main;
+    letter-spacing: 1.5px;
+    text-align:center;
+    margin-bottom: 10px;
+    color: #6b6b6b;
+  }
+  .filter{
+    .list_sort{;
+
+    }
+    .list_filter{
+
+    }
+    .list_sort,
+    .list_filter{
+      margin: 20px auto;
+      text-align: center;
+      box-sizing:border-box;
+      border-bottom:1px solid #ddd;
+      padding:5px 0;
+      max-width: 320px;
+      .options{
+        display: block;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        border: none;
+        background: none;
+      }
+    }
+  }
+}

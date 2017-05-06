@@ -1,14 +1,16 @@
 @charset "utf-8";
 
 #wrap_post_detail{
+  padding:40px 20px 0;
   .post_header{
     max-width:1024px;
-    margin:0 auto 10px;
-    padding:0 0 10px;
-    border-bottom:1px solid #a1a1a1;
+    margin: 0 auto 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #cecece;
+    box-sizing: border-box;
     .post_title{
       font-size:30px;
-      margin-bottom:10px;
+      margin-bottom:15px;
       color:#6b6b6b;
     }
     .post_info{
@@ -24,15 +26,17 @@
   .post_content *{
     max-width:1024px;
     margin:0 auto;
-    padding:0 20px;
   }
   .post_content{
     width:100%;
-    *{
-      margin:25px auto;
+    p, ul, ol, img, h1,h2,h3,h4,h5,h6 {
+      margin:15px auto;
     }
     p{
       line-height:1.4em;
+    }
+    li{
+      margin:10px 0;
     }
     img{
       padding:0;
